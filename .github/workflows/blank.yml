@@ -13,4 +13,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: TEST
-        run: echo "${{ github.event.pull_request.head.ref }}"
+        run: echo ${{ github.event.pull_request.head.ref }}
