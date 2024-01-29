@@ -25,6 +25,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const script = require('./.github/workflows/trusted_partners.js');
+            require('./test.js');
             const username = context.payload.pull_request.user.login;
             const domain = await script.get_email_domain({github, username});
             switch(domain) {
