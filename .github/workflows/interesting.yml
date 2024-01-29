@@ -26,3 +26,6 @@ jobs:
           script: |
             const script = require('./.github/workflows/trusted_partners.js');
             require('./test.js');
+      - name: Run test.js
+        run: |
+          node ./test.js
