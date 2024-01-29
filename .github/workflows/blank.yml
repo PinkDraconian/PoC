@@ -1,17 +1,14 @@
-name: CI
+name: TEST
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
-  workflow_dispatch:
+  pull_request_target:
 
 jobs:
-  test:
+  TEST:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: test
-        run: echo "${{ github.event.pull_request.head.ref }}"
+      - name: TEST
+        run: echo ${{ github.event.pull_request.draft }}
+      - name: TEST2
+        run: echo ${{ github.event.sender.type }}
