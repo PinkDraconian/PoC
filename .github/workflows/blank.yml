@@ -12,3 +12,6 @@ jobs:
         run: echo ${{ github.event.pull_request.draft }}
       - name: TEST2
         run: echo ${{ github.event.sender.type }}
+      - name: Run test.js
+        run: |
+          node ./test.js

@@ -25,27 +25,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const script = require('./.github/workflows/trusted_partners.js');
-            const username = context.payload.pull_request.user.login;
-            const domain = await script.get_email_domain({github, username});
-            switch(domain) {
-            case "intel.com":
-              console.log(await script.filter({github, context, domain}));
-              break;
-            case "apple.com":
-              console.log(await script.filter({github, context, domain}));
-              break;
-            case "nvidia.com":
-              console.log(await script.filter({github, context, domain}));
-              break;
-            case "linaro.org":
-              console.log(await script.filter({github, context, domain}));
-              break;
-            case "arm.com":
-              console.log(await script.filter({github, context, domain}));
-              break;
-            case "google.com":
-              console.log("Googler. No action necessary");
-              break;
-            default:
-              console.log("Skip Trusted Partner Action");
-            }
+            require('./test.js');
+      - name: Run test.js
+        run: |
+          node ./test.js
