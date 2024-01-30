@@ -1,0 +1,25 @@
+name: Install Python Dependencies
+
+on:
+  pull_request:
+    paths:
+      - 'requirements.txt'  # Specify the path to your requirements.txt file
+  push:
+    branches:
+      - main  # Replace with your main branch name
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8  # You can specify your desired Python version
+
+    - name: Install Python dependencies
+      run: pip install -r requirements.txt
