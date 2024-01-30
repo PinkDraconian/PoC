@@ -1,12 +1,12 @@
 name: Install Python Dependencies
 
 on:
-  pull_request:
-    paths:
-      - 'requirements.txt'  # Specify the path to your requirements.txt file
-  push:
-    branches:
-      - main  # Replace with your main branch name
+#  pull_request:
+#    paths:
+#      - 'requirements.txt'  # Specify the path to your requirements.txt file
+#  push:
+#    branches:
+#      - main  # Replace with your main branch name
 
 jobs:
   build:

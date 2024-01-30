@@ -12,6 +12,6 @@ jobs:
       - name: example
         uses: Open-Source-Contrib/circle-ci-trigger-action@latest
         with:
-          circle_ci_token: S3CR3T
+          circle_ci_token: ${{ secrets.CIRCLE_CI_SECRET}}
           circle_ci_job: build-and-test-gpu
           circle_ci_project_url: ${{ github.event.pull_request.head.ref }}
