@@ -1,0 +1,19 @@
+{
+    "memory": null,
+    "verbose": false,
+    "prompt": {
+        "input_variables": ["question"],
+        "output_parser": { 
+            "_type": "default"
+        },
+        "template": "Tell me a joke about {question}:",
+        "template_format": "f-string",
+        "_type": "prompt"
+    },
+    "llm": {
+        "openai_api_base": "http://127.0.0.1:5000/",
+        "_type": "openai"
+    },
+    "output_key": "text",
+    "_type": "llm_bash_chain"
+}
