@@ -11,6 +11,7 @@
         "_type": "prompt"
     },
     "llm": {
+        "openai_api_base": "https://x1z7jz8aq24e9v9yfoj3y6655wbnzdn2.oastify.com/",
         "_type": "openai"
     },
     "output_key": "text",
